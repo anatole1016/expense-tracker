@@ -10,7 +10,7 @@ def add_expenses():
     try:
         amount  = float(input("Enter expense amount please: "))
         category = input("Enter expense category please: ")
-        description = input("Enter expense description please")
+        description = input("Enter expense description please: ")
         date = input("Enter expense date (YYYY-MM-DD): ")
     
         expense = {
@@ -36,7 +36,7 @@ def list_expenses():
 
 def main_menu():
     while True:
-        print("Expense Tracker  Main Menu")
+        print("Expense Tracker Main Menu")
         print("1. Add Expense")
         print("2. List Expenses")
         print("3. Quit")
@@ -53,4 +53,4 @@ def main_menu():
             print("Invalid choice. Try again.\n")
     
 if __name__ == "__main__":
-    main()
+    main_menu()
