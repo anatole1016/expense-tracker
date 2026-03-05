@@ -8,8 +8,6 @@ def data_frame():
     df["date"] = pd.to_datetime(df["date"])
     return df
 
-import matplotlib.pyplot as plt
-
 def category_expenses():
     df = data_frame()
     if df.empty:
