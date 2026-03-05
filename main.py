@@ -26,6 +26,13 @@ def add_expenses():
     except ValueError:
         print("Invalid amount. Try again.\n")
         
+def show_total_spending():
+    if not expenses:
+        print("No file found")
+        return
+
+total = sum(e["amount"] for e in expenses)
+print(f"Total spent: ${total:2f})")
 
 def list_expenses():
     if not expenses:
@@ -41,7 +48,8 @@ def main_menu():
         print("1. Add Expense")
         print("2. List Expenses")
         print("3. Show Category Chart")
-        print("4. Quit")
+        print("4. Show total")
+        print("5. Quit")
         choice = input("Select an option: ")
         
         if choice == "1":
@@ -51,6 +59,8 @@ def main_menu():
         elif choice == "3":
             category_expenses()
         elif choice == "4":
+            list_expenses()
+        elif choice == "5":
             print("Goodbye!")
             break
         else:
