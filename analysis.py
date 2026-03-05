@@ -1,5 +1,4 @@
 import pandas as pd
-import matplotlib as plt
 import matplotlib.pyplot as plt
 from storage import load_expenses
 
